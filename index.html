@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Gemas Clarisaa</title>
+    <!-- Memuat Tailwind CSS untuk Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Menggunakan font yang ramah dan menambahkan efek transisi global */
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease;
+        }
+        .cute-shadow {
+            box-shadow: 0 15px 30px -5px rgba(255, 192, 203, 0.4), 0 5px 15px -5px rgba(255, 192, 203, 0.3);
+        }
+        .wavy-divider {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23fce7f3' fill-opacity='1' d='M0,192L80,186.7C160,181,320,171,480,165.3C640,160,800,160,960,176C1120,192,1280,224,1360,240L1440,256L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100px; /* Tinggi gelombang */
+        }
+        /* Custom scrollbar yang gemas */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #f472b6; /* pink-400 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #ffe4e6; /* pink-100 */
+        }
+    </style>
+</head>
+<body class="bg-pink-50 text-pink-900 min-h-screen">
+
+    <!-- Header & Navigasi -->
+    <header class="sticky top-0 z-50 bg-white bg-opacity-90 backdrop-blur-sm shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="text-3xl font-extrabold text-pink-600 tracking-wider">
+                Clarisaa
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#tentang" class="text-pink-600 hover:text-pink-800 font-medium transition duration-200">Tentang Saya</a>
+                <a href="#pendidikan" class="text-pink-600 hover:text-pink-800 font-medium transition duration-200">Pendidikan</a>
+                <a href="#keterampilan" class="text-pink-600 hover:text-pink-800 font-medium transition duration-200">Keterampilan</a>
+            </nav>
+            <!-- Tombol Menu Mobile (hanya ikon) -->
+            <button id="mobile-menu-button" class="md:hidden p-2 text-pink-600 hover:text-pink-800 transition duration-200">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Menu Mobile (Tersembunyi) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg border-t border-pink-100">
+            <a href="#tentang" class="block px-4 py-2 text-pink-600 hover:bg-pink-100 transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Tentang Saya</a>
+            <a href="#pendidikan" class="block px-4 py-2 text-pink-600 hover:bg-pink-100 transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Pendidikan</a>
+            <a href="#keterampilan" class="block px-4 py-2 text-pink-600 hover:bg-pink-100 transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Keterampilan</a>
+        </div>
+    </header>
+
+    <!-- Bagian Hero (Perkenalan) -->
+    <section class="py-16 sm:py-24 text-center bg-pink-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <!-- Profil Image Placeholder -->
+            <div class="mx-auto w-32 h-32 bg-pink-300 rounded-full cute-shadow overflow-hidden mb-6 flex items-center justify-center border-4 border-pink-50">
+                <svg class="w-20 h-20 text-pink-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+            </div>
+            
+            <h1 class="text-5xl sm:text-7xl font-black mb-4 text-pink-700 leading-tight">
+                Hai, Saya Clarisaa
+            </h1>
+            <p class="text-xl sm:text-2xl font-semibold text-pink-500 mb-6">
+                Seorang Pelajar dan Calon Akuntan yang Ceria!
+            </p>
+            <p class="text-pink-800 max-w-2xl mx-auto mb-8">
+                Selamat datang di ruang gemas saya! Saya bersemangat tentang angka, organisasi, dan selalu siap belajar hal baru. Mari kita terhubung dan berbagi ide.
+            </p>
+            <a href="#tentang" class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 cute-shadow">
+                Jelajahi Portofolio Saya ✨
+            </a>
+        </div>
+    </section>
+    
+    <!-- Pembatas Bergelombang yang Gemas -->
+    <div class="wavy-divider bg-pink-100"></div>
+
+    <!-- Bagian Tentang Saya -->
+    <section id="tentang" class="py-16 bg-pink-50">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-10 text-pink-600">
+                🌸 Tentang Clarisaa 🌸
+            </h2>
+            <div class="bg-white p-8 sm:p-12 rounded-3xl cute-shadow border-4 border-pink-200">
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-pink-500">
+                            Status & Filosofi
+                        </h3>
+                        <div class="space-y-4">
+                            <p class="text-lg flex items-center">
+                                <span class="bg-pink-200 p-2 rounded-full mr-3 text-pink-700">📚</span>
+                                <span class="font-bold">Status:</span> Pelajar
+                            </p>
+                            <p class="text-lg">
+                                Saat ini saya adalah seorang pelajar yang fokus pada ketelitian dan manajemen data. Saya percaya bahwa setiap detail kecil sangat penting untuk menghasilkan output yang sempurna.
+                            </p>
+                            <p class="text-sm italic text-pink-400 mt-4">
+                                "Rapi itu indah, akurat itu kekuatan."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-8 md:mt-0">
+                        <h3 class="text-2xl font-semibold mb-4 text-pink-500">
+                            Data Kontak (Mockup)
+                        </h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-lg">
+                                <span class="bg-pink-200 p-2 rounded-full mr-3 text-pink-700">📧</span>
+                                <a href="mailto:clarisaa@email.com" class="hover:text-pink-600 transition duration-200">clarisaa@email.com</a>
+                            </li>
+                            <li class="flex items-center text-lg">
+                                <span class="bg-pink-200 p-2 rounded-full mr-3 text-pink-700">🔗</span>
+                                <a href="#" class="hover:text-pink-600 transition duration-200">LinkedIn/Media Sosial Saya</a>
+                            </li>
+                            <li class="flex items-center text-lg">
+                                <span class="bg-pink-200 p-2 rounded-full mr-3 text-pink-700">📍</span>
+                                Lokasi: Jakarta (Contoh)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Riwayat Pendidikan -->
+    <section id="pendidikan" class="py-16 bg-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-10 text-pink-600">
+                🎓 Riwayat Pendidikan 🎓
+            </h2>
+
+            <div class="space-y-8">
+                <!-- Pendidikan Utama -->
+                <div class="bg-pink-50 p-6 rounded-2xl cute-shadow border-l-4 border-pink-500 transform hover:scale-[1.02] transition duration-300">
+                    <div class="flex items-center mb-2">
+                        <span class="text-3xl mr-3 text-pink-700">🏫</span>
+                        <h3 class="text-2xl font-bold text-pink-800">
+                            SMK Dewi Sartika
+                        </h3>
+                    </div>
+                    <p class="text-xl font-semibold text-pink-600 mb-2">
+                        Jurusan Akuntansi
+                    </p>
+                    <p class="text-pink-500 italic">
+                        Tahun Ajaran: [Contoh: 2021 - Sekarang]
+                    </p>
+                    <ul class="list-disc list-inside text-pink-700 mt-4 space-y-2 pl-4">
+                        <li>Fokus utama pada Pembukuan, Jurnal Umum, dan Penyusunan Laporan Keuangan.</li>
+                        <li>Menguasai dasar-dasar perpajakan dan aplikasi akuntansi modern.</li>
+                        <li>Berpartisipasi aktif dalam kegiatan klub kesiswaan/OSIS.</li>
+                    </ul>
+                </div>
+
+                <!-- Pendidikan Lain (Contoh) -->
+                <div class="bg-pink-50 p-6 rounded-2xl cute-shadow border-l-4 border-pink-300 transform hover:scale-[1.02] transition duration-300">
+                    <div class="flex items-center mb-2">
+                        <span class="text-3xl mr-3 text-pink-700">💻</span>
+                        <h3 class="text-2xl font-bold text-pink-800">
+                            Kursus Keterampilan Digital
+                        </h3>
+                    </div>
+                    <p class="text-xl font-semibold text-pink-600 mb-2">
+                        [Contoh: Microsoft Excel Tingkat Lanjut]
+                    </p>
+                    <p class="text-pink-500 italic">
+                        [Contoh: Sertifikat dari Lembaga X, 2023]
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Keterampilan (Mockup) -->
+    <section id="keterampilan" class="py-16 bg-pink-50">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-10 text-pink-600">
+                🛠️ Keterampilan & Keahlian 🛠️
+            </h2>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Skill Card 1 -->
+                <div class="bg-white p-6 rounded-2xl text-center cute-shadow transition duration-300 hover:bg-pink-100">
+                    <span class="text-4xl mb-3 block">📊</span>
+                    <p class="font-semibold text-pink-800">Pembukuan & Jurnal</p>
+                    <p class="text-sm text-pink-500">Detail dan Akurat</p>
+                </div>
+                <!-- Skill Card 2 -->
+                <div class="bg-white p-6 rounded-2xl text-center cute-shadow transition duration-300 hover:bg-pink-100">
+                    <span class="text-4xl mb-3 block">💻</span>
+                    <p class="font-semibold text-pink-800">Microsoft Excel</p>
+                    <p class="text-sm text-pink-500">Formula & Pivot Table</p>
+                </div>
+                <!-- Skill Card 3 -->
+                <div class="bg-white p-6 rounded-2xl text-center cute-shadow transition duration-300 hover:bg-pink-100">
+                    <span class="text-4xl mb-3 block">💰</span>
+                    <p class="font-semibold text-pink-800">Perpajakan Dasar</p>
+                    <p class="text-sm text-pink-500">PPH dan PPN</p>
+                </div>
+                <!-- Skill Card 4 -->
+                <div class="bg-white p-6 rounded-2xl text-center cute-shadow transition duration-300 hover:bg-pink-100">
+                    <span class="text-4xl mb-3 block">✍️</span>
+                    <p class="font-semibold text-pink-800">Input Data Cepat</p>
+                    <p class="text-sm text-pink-500">Keyboarding 10 Jari</p>
+                </div>
+                <!-- Skill Card 5 -->
+                <div class="bg-white p-6 rounded-2xl text-center cute-shadow transition duration-300 hover:bg-pink-100">
+                    <span class="text-4xl mb-3 block">🔄</span>
+                    <p class="font-semibold text-pink-800">Teliti & Terorganisir</p>
+                    <p class="text-sm text-pink-500">Keterampilan Soft Skill</p>
+                </div>
+                <!-- Skill Card 6 -->
+                <div class="bg-white p-6 rounded-2xl text-center cute-shadow transition duration-300 hover:bg-pink-100">
+                    <span class="text-4xl mb-3 block">☁️</span>
+                    <p class="font-semibold text-pink-800">Google Workspace</p>
+                    <p class="text-sm text-pink-500">Sheets & Docs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-600 text-white py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-xl font-bold mb-3">
+                Terima kasih sudah berkunjung!
+            </p>
+            <div class="flex justify-center space-x-4 mb-3">
+                <!-- Ikon Media Sosial (Mockup) -->
+                <a href="#" class="text-pink-200 hover:text-white transition duration-200">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.75V11H9V9h2V7c0-2.203 1.797-4 4-4h2v2h-2c-1.104 0-2 .896-2 2v2h3.5L16 11h-2v6.75h-1z"/></svg>
+                </a>
+                <a href="#" class="text-pink-200 hover:text-white transition duration-200">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.999 3.01H4a1 1 0 00-1 1v16a1 1 0 001 1h16a1 1 0 001-1V4a1 1 0 00-1-1zm-6 16h-4V12H7V9h3v-.92A4.27 4.27 0 0113.8 5h3.2v3h-2.1c-.81 0-1.4.38-1.4 1.34V12h3.5l-.5 4h-3V19z"/></svg>
+                </a>
+            </div>
+            <p class="text-sm text-pink-200">
+                &copy; 2025 Clarisaa's Cute Portfolio. Dibuat dengan semangat.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk interaksi sederhana -->
+    <script>
+        // Toggle menu mobile
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Event listener untuk menutup menu saat mengklik tautan di mobile
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
